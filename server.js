@@ -15,10 +15,12 @@ hbs.registerHelper('getCurrentYear',()=>{
 app.set('view engine','hbs');
 app.use(express.static(__dirname +'/public'));
 
-app.use((req,res,next)=>{
-  res.render('newmiddel.hbs');
+// app.use((req,res,next)=>{
+//   res.render('newmiddel.hbs');
+// });
+app.get('/project',(req,res)=>{
+  res.render('home.hbs');
 });
-
 app.get('/',(req,res)=>{
 res.render('home.hbs',{
   body,
