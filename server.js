@@ -1,5 +1,6 @@
 const express = require('express');
 const hbs = require('hbs');
+const port=process.env.PORT||3000;
 var app=express();
 
 var body={
@@ -31,4 +32,4 @@ app.get('/about',(req,res)=>{
 //  res.send('<h1>hello world</h>');
 
 });
-app.listen(3000);
+app.listen(port);
